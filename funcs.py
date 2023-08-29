@@ -32,10 +32,6 @@ cant0 = lambda f: lambda x: (f(x*3)*part(x,3,0)+part(x,3,1)+(f((x-2/3)*3)+1)*par
 
 cant2 = iterate(cant0,iter)(lambda x: x)
 
-#a step function s is a function s:[0,1]->[0,1] with s(0)=0 and s(1)=1
-# a piecewise linear function pl is a list [[pl[0][0],pl[0][1]],[pl[1][0],pl[1][1]]] etc.
-
-#this is a bolzano iterator. s is a step function and
 cant_pl = [[1/3,1/3],[2/3,1/2]]
 oka_pl = [[1/3,2/3],[2/3,1/3]]
 
@@ -43,17 +39,6 @@ def bolz(pl):
     pl = pl.append([1,1])
     pl = pl.insert(0,[0,0])
     return lambda x: sum([chi(lambda y: ((y-pl[i][0])/(pl[i+1][0]-pl[i][0]))*(pl[i+1][1]-pl[i][1])+pl[i][1],pl[i][0],pl[i+1][0]) (x) for i in range(len(pl))])
-
-
-#cant3 = bolz(cant_pl)
-# def bolz(s,pl):
-#     N = len(pl)
-#     if N == 0:
-#         return (lambda x: x)
-#     if N == 1:
-#         return s(x/pl[0][0])*pl[0][1]+
-
-
 
 smooth = lambda x: sna(x)/(sna(x)+sna(1-x))
 cant = lambda x: floor(x)+sum([(1-(((digit(x,3,-k)+1)%3)%2))*np.prod([1-digit(x,3,-j)%2 for j in range(k)],axis=0)/pow(2,k) for k in range(iter)])
