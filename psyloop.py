@@ -166,7 +166,7 @@ def load_settings():
             "scale": 1.0,
             "drift": "0+0j",
             "numscreencaps": 10,
-            "path": 'C:\\Users\\bbhan\\Videos'
+            "path": 'C:\\'
         }
         with open(settings_path, 'w') as settings_file:
             json.dump(settings, settings_file)
