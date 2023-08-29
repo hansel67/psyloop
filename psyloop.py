@@ -166,7 +166,7 @@ def load_settings():
             "scale": 1.0,
             "drift": "0+0j",
             "numscreencaps": 10,
-            "path": 'C:\\'
+            "path": 'C:'
         }
         with open(settings_path, 'w') as settings_file:
             json.dump(settings, settings_file)
@@ -241,7 +241,7 @@ default_form_values = {
     "scale": 1.0,
     "drift": "0+0j",
     "numscreencaps": 10,
-    "path": 'C:\\Users\\bbhan\\Videos'
+    "path": 'C:'
 }
 paused = False
 # Pause Button
