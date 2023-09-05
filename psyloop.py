@@ -211,6 +211,12 @@ def toggle_pause():
     else:
         paused = True
         pause_button.config(text="Resume")
+
+def key_release_handler(event):
+    # Check if the pressed key is not an arrow key
+    if event.keysym not in ["Up", "Down", "Left", "Right"]:
+        update_frame()
+
 # Define your settings and input_str here
 settings = load_settings()
 
@@ -228,7 +234,7 @@ input_text = tk.Text(root, height=5, width=30)
 input_text.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
 
 # Bind the update function to the <KeyRelease> event of the text box
-input_text.bind("<KeyRelease>", lambda event: update_frame())
+input_text.bind("<KeyRelease>", key_release_handler)
 
 
 default_form_values = {
