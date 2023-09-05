@@ -1,5 +1,5 @@
 import numpy as np
-from numpy import exp,pi,sin,cos,tan,mod,log,floor,ceil,sqrt,maximum,minimum,ones,zeros,angle,sign,where,logical_and
+from numpy import exp,pi,sin,cos,tan,arcsin,arccos,arctan,arctan2,sinh,cosh,tanh,mod,log,floor,ceil,sqrt,maximum,minimum,ones,zeros,angle,sign,where,logical_and
 from math import pow as mpow
 import matplotlib.pyplot as plt
 
