@@ -42,7 +42,7 @@ def generate_image(input_str, settings,t):
         x, y = np.meshgrid(xx, yy)
         z = x + 1j * y
         z = z * scale + drift
-        F = apply_function("gray(" + input_str + ")", z, t)
+        F = apply_function(input_str, z, t)
 
         data = np.dstack(F) * 255
         frame = data.astype(np.uint8)
@@ -52,8 +52,6 @@ def generate_image(input_str, settings,t):
         return None
 
 def render(expression,settings):
-
-    expression = "gray("+expression+")"
 
     projname = settings["projname"]
     h = int(settings["h"])
