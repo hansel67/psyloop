@@ -1,7 +1,7 @@
 # PsyLoop
 Tkinter window to preview and render versatile fractal animation mp4s with a single input function.
 
-The output should be in the form of a triplet (R,G,B) of floats between 0 and 1.
+The output should be in the form of a triplet (R,G,B) of floats between 0 and 1. Built-in colormaps convert real numbers to (R,G,B) triplets.
 
 Settings:
 * height $h$ px
