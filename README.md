@@ -8,6 +8,7 @@ Settings:
 * width $w$ px
 * framerate $fps$ fps
 * duration $duration$ sec
+
 Variables:
 * $x\in[-w/h,w/h]$
 * $y\in[-1,1]$
