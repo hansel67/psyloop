@@ -1,3 +1,5 @@
+https://github.com/hansel67/psyloop/assets/16061901/56f58a16-49b2-4ffd-9303-a9799639625c
+
 # PsyLoop
 Tkinter window to preview and render versatile fractal animation mp4s with a single input function.
 
